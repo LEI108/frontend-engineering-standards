@@ -1,0 +1,43 @@
+package_version: 1.0.0
+bundle_date: 2026-11-21
+authority:
+  standards: ../standards
+  note: Skills provide conditional execution workflows and do not override formal standards.
+
+skills:
+  - name: frontend-design
+    entrypoint: frontend-design/SKILL.md
+    trigger: Frontend page, component, design-system, responsive, accessibility, or visual-quality work.
+    source: Team-controlled copy maintained by the user.
+    language: English execution source; Chinese routing is in ../guides/技能中文导读.md.
+    bundle_changes:
+      - Removed dangling links to deleted Chinese mirrors.
+      - Excluded human-only README files from the invokable package.
+
+  - name: lanhu-design-build
+    entrypoint: lanhu-design-build/SKILL.md
+    trigger: Lanhu design evidence, design-to-code, chart dashboard, or visual acceptance work.
+    source: Team-controlled copy maintained by the user.
+    external_dependency: ../integrations/Lanhu-MCP集成与安全指南.md
+    bundle_changes:
+      - Replaced machine-specific historical example paths with repository-relative identifiers.
+
+  - name: lean-code-edits
+    entrypoint: lean-code-edits/SKILL.md
+    trigger: Focused bug fix, feature edit, review follow-up, refactor, or routine repository maintenance.
+    source: Team-controlled copy maintained by the user.
+    bundle_changes:
+      - Normalized the original nested skill entrypoint to the skill root.
+      - Kept AGENTS.md beside SKILL.md as its canonical behavior policy.
+
+  - name: precision-frontend-engineering
+    entrypoint: precision-frontend-engineering/SKILL.md
+    trigger: Non-trivial work in an existing frontend application involving contracts, reuse, state, or focused verification.
+    source: Team-controlled copy maintained by the user.
+    bundle_changes:
+      - Excluded human-only README files from the invokable package.
+
+installation:
+  guide: INSTALL.md
+  script: ../scripts/install-skills.ps1
+  overwrite_policy: Existing installed skills are never overwritten unless the caller explicitly requests replacement; replacement creates a backup.

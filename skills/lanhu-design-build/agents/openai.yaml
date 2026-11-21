@@ -1,0 +1,4 @@
+interface:
+  display_name: "蓝湖设计构建"
+  short_description: "基于蓝湖证据链完成普通页面与数据大屏的实现、交互和验收"
+  default_prompt: "Use $lanhu-design-build to lock complete Lanhu module and property evidence, load the applicable code, chart, and dashboard contracts, and implement only after explicit authorization."
